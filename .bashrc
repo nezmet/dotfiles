@@ -85,4 +85,5 @@ _open_files_for_editing() {
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=eos-pacdiff
 ################################################################################
-
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/tools/node-v14.15.4-linux-x64"
