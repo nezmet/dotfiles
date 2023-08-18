@@ -22,13 +22,6 @@ workspace_layout default
 # extra options for windows: #
 ##############################
 
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [title="Origin"] floating enable
-assign [class="(?i)firefox"] $ws2
-assign [class="(?i)discord"] $ws3
-assign [class="(?i)steam"] $ws4
-
 
 #border indicator on windows:
 new_window pixel 0
@@ -167,6 +160,12 @@ bindsym $mod+Shift+r restart
 bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
+# change ws output display
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+Down move workspace to output down
+bindsym $mod+Control+Up move workspace to output up
+bindsym $mod+Control+Right moveworkspace to output right
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -263,6 +262,18 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Set Monitors
+set $mon1 DP-0
+set $mon2 DP-2
+
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [title="Origin"] floating enable
+assign [class="(?i)firefox"] $ws2
+assign [class="(?i)discord"] $ws3
+assign [class="(?i)steam"] $ws4
 
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
