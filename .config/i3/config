@@ -63,6 +63,12 @@ bindsym $mod+Shift+3    move container to workspace  $ws3
 bindsym $mod+Shift+4    move container to workspace  $ws4
 bindsym $mod+Shift+5    move container to workspace  $ws5
 bindsym $mod+Shift+6    move container to workspace  $ws6
+bindsym $mod+Shift+7    move container to workspace  $ws7
+bindsym $mod+Shift+8    move container to workspace  $ws8
+bindsym $mod+Shift+9    move container to workspace  $ws9
+bindsym $mod+Shift+0    move container to workspace  $ws0
+
+
 
 # resize window (you can also use the mouse for that):
 mode "resize" {
@@ -240,19 +246,9 @@ workspace $ws8 output $mon2
 workspace $ws9 output $mon2
 workspace $ws10 output $mon2
 
-
 assign [class="(?i)firefox"] $ws2
 assign [class="(?i)discord"] $ws3
 assign [class="(?i)steam"] $ws4
-
-# use workspaces on different displays:
-# where you have to replace VGA-0/HDMI-0 with the names for your displays
-# you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
 #assign [class="Xfce4-terminal"] $ws1
